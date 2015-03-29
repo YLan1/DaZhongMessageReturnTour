@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TitleViewController.h
 //  DaZhongMessageCommentTour
 //
 //  Created by YLan on 15/3/27.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TitleViewController : UIViewController
 
 @end
-
