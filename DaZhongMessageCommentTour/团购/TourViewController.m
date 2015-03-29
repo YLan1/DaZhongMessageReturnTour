@@ -7,12 +7,20 @@
 //
 
 #import "TourViewController.h"
+#import "MyTabbarItem.h"
 
 @interface TourViewController ()
 
 @end
 
 @implementation TourViewController
+
+- (instancetype)init{
+    if (self = [super init]) {
+        self.tabBarItem = [MyTabbarItem myTabbarItemWithTitle:@"团购" imageName:@"home_footbar_icon_group" andImageHLName:@"home_footbar_icon_group_pressed"];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

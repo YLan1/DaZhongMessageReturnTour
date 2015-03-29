@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MyButton;
 
+typedef void(^block)(MyButton *button);
 @interface MyButton : UIButton
 
+@property (nonatomic, copy) block myBlock;
+
++(MyButton *)buttonWithFrame:(CGRect)frame type:(UIButtonType)type title:(NSString *)title backgroundImage:(NSString *)background image:(NSString *)image andBlock:(block)tempBlock;
 @end

@@ -7,12 +7,20 @@
 //
 
 #import "FindViewController.h"
+#import "MyTabbarItem.h"
 
 @interface FindViewController ()
 
 @end
 
 @implementation FindViewController
+
+- (instancetype)init{
+    if (self = [super init]) {
+        self.tabBarItem = [MyTabbarItem myTabbarItemWithTitle:@"发现" imageName:@"home_footbar_icon_found" andImageHLName:@"home_footbar_icon_found_pressed"];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

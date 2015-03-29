@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"大牌抢购";
     // Do any additional setup after loading the view.
 }
 

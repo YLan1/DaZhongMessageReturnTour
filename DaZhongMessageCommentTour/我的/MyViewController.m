@@ -7,12 +7,20 @@
 //
 
 #import "MyViewController.h"
+#import "MyTabbarItem.h"
 
 @interface MyViewController ()
 
 @end
 
 @implementation MyViewController
+
+- (instancetype)init{
+    if (self = [super init]) {
+        self.tabBarItem = [MyTabbarItem myTabbarItemWithTitle:@"我的" imageName:@"home_footbar_icon_my" andImageHLName:@"home_footbar_icon_my_pressed"];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

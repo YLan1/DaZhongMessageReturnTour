@@ -10,4 +10,6 @@
 
 @interface MyTabbarItem : UITabBarItem
 
++ (MyTabbarItem *)myTabbarItemWithTitle:(NSString *)title imageName:(NSString *)imageName andImageHLName:(NSString *)imageHlName;
+
 @end

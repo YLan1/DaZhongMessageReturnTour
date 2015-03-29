@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "TitleViewController.h"
+#import "TourViewController.h"
+#import "FindViewController.h"
+#import "MyViewController.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +18,37 @@
 
 @implementation AppDelegate
 
+- (void)dealloc{
+    
+    [_window release];
+    [super dealloc];
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    TitleViewController *titleView = [[[TitleViewController alloc] init] autorelease];
+    UINavigationController *titleNav = [[[UINavigationController alloc] initWithRootViewController:titleView] autorelease];
+    
+    TourViewController *tourView = [[[TourViewController alloc] init] autorelease];
+    UINavigationController *tourNav = [[[UINavigationController alloc] initWithRootViewController:tourView] autorelease];
+    
+    FindViewController *findView = [[[FindViewController alloc] init] autorelease];
+    UINavigationController *findNav = [[[UINavigationController alloc] initWithRootViewController:findView] autorelease];
+    
+    MyViewController *myView = [[[MyViewController alloc] init] autorelease];
+    UINavigationController *myNav = [[[UINavigationController alloc] initWithRootViewController:myView] autorelease];
+    
+    UITabBarController *tabBar = [[[UITabBarController alloc] init] autorelease];
+    
+    tabBar.viewControllers = @[titleNav, tourNav, findNav, myNav];
+    
+    self.window.rootViewController = tabBar;
+    
     return YES;
 }
 
